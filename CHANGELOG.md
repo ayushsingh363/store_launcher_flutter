@@ -9,3 +9,7 @@
 ## 1.0.2
 
 - Final stable release.
+
+## 1.0.3
+
+- Improve pub score.

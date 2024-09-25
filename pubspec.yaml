@@ -1,6 +1,6 @@
 name: store_launcher_plus
 description: StoreLauncher is a powerful utility package for Flutter applications that allows developers to seamlessly launch the Google Play Store and Apple App Store directly from their apps. By leveraging platform detection, StoreLauncher ensures that users are redirected to the appropriate store based on their device—Android or iOS—without any extra hassle. This package simplifies the process of promoting your app, as it enables users to access their app's store page with a single function call. Developers can easily launch their app's store page using the current app's package name or app ID, or specify any other app to promote. Built with Dart's null safety features, StoreLauncher provides a reliable and safe solution for enhancing user engagement and encouraging downloads or updates. Integrate StoreLauncher into your Flutter app to streamline app store navigation and improve the overall user experience.
-version: 1.0.2
+version: 1.0.3
 repository: https://github.com/ayushsingh363/store_launcher_flutter
 
 environment:
