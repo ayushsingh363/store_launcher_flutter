@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="store_launcher API docs, for the Dart programming language.">
+  <title>store_launcher - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">store_launcher package</li>
+  </ol>
+  <div class="self-name">store_launcher</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="storelauncher">StoreLauncher</h1>
+<p><code>StoreLauncher</code> is a utility package for Flutter apps that allows launching the Google Play Store (for Android) or the Apple App Store (for iOS) directly from your app. It uses platform-specific logic to automatically determine whether the app is running on Android or iOS and launches the respective store for the app's details page.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Launch Google Play Store</strong>: Open the Play Store app page for a specified app using its package name (or the current app's package name by default).</li>
+<li><strong>Launch Apple App Store</strong>: Open the App Store app page for a specified app using its app ID.</li>
+<li><strong>Platform detection</strong>: Automatically detects whether the app is running on Android or iOS and launches the correct store accordingly.</li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>To start using the <code>StoreLauncher</code> package, add the following dependencies to your <code>pubspec.yaml</code> file:</p>
+<pre class="language-yaml"><code class="language-yaml">dependencies:
+  store_launcher: ^1.0.0  # Add the latest version of the package
+</code></pre>
+<p>Then, install the dependencies by running:</p>
+<pre class="language-bash"><code class="language-bash">flutter pub get
+</code></pre>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Ensure that your app targets either Android or iOS platforms.</li>
+<li>The app should be deployed on the Google Play Store or Apple App Store for this functionality to work.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>Here are a few examples of how you can use the StoreLauncher class in your Flutter app:</p>
+<h3 id="launch-google-play-store">Launch Google Play Store</h3>
+<p>To launch the Google Play Store for your app (or another app by specifying its package name):</p>
+<pre class="language-dart"><code class="language-dart">bool success = await StoreLauncher.launchPlayStore(packageName: 'com.example.app');
+if (success) {
+  print('Google Play Store launched successfully!');
+} else {
+  print('Failed to launch Google Play Store.');
+}
+</code></pre>
+<p>If no package name is provided, the package will use the current app's package name:</p>
+<pre class="language-dart"><code class="language-dart">bool success = await StoreLauncher.launchPlayStore();
+if (success) {
+  print('Google Play Store launched successfully!');
+} else {
+  print('Failed to launch Google Play Store.');
+}
+</code></pre>
+<h3 id="launch-apple-app-store">Launch Apple App Store</h3>
+<p>To launch the Apple App Store for your app, provide the App Store ID of the app:</p>
+<pre class="language-dart"><code class="language-dart">bool success = await StoreLauncher.launchAppStore(appId: '123456789');
+if (success) {
+  print('App Store launched successfully!');
+} else {
+  print('Failed to launch App Store.');
+}
+</code></pre>
+<h3 id="automatically-detect-platform-and-launch-store">Automatically Detect Platform and Launch Store</h3>
+<p>You can use the launchStore method to automatically detect the platform and launch the appropriate store:</p>
+<pre class="language-dart"><code class="language-dart">bool success = await StoreLauncher.launchStore(
+  packageName: 'com.example.app', // Optional for Android
+  appId: '1234567890', // Required for iOS
+);
+if (success) {
+  print('Store launched successfully!');
+} else {
+  print('Failed to launch store.');
+}
+</code></pre>
+<h2 id="additional-information">Additional information</h2>
+<ul>
+<li>This package is designed for use in Flutter apps targeting Android and iOS.</li>
+<li>For more information on configuring <a href="https://pub.dev/packages/package_info_plus">package_info_plus</a>, visit the package_info_plus documentation.</li>
+<li>For more information on configuring <a href="https://pub.dev/packages/url_launcher">url_launcher</a>, visit the url_launcher documentation.</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are welcome! If you have any suggestions, bug reports, or would like to contribute to the package, feel free to open an issue or submit a pull request.</p>
+<h2 id="issues">Issues</h2>
+<p>If you encounter any issues while using this package, please file an issue on the <a href="https://github.com/ayushsingh363/store_launcher_flutter">GitHub repository</a>. We will do our best to address the issue as soon as possible.</p>
+<h2 id="license">License</h2>
+<p>This package is licensed under the MIT license.</p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="store_launcher">
+  <span class="name"><a href="store_launcher/store_launcher-library.html">store_launcher</a></span> 
+
+</dt>
+<dd>Support for doing something awesome.
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li class="self-crumb">store_launcher package</li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">store_launcher</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="store_launcher/store_launcher-library.html">store_launcher</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    store_launcher
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

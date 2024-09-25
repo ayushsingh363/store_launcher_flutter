@@ -3,6 +3,6 @@
 /// More dartdocs go here.
 library;
 
-export 'src/store_launcher_base.dart';
+export 'src/store_launcher_plus_base.dart';
 
 // TODO: Export any libraries intended for clients of this package.

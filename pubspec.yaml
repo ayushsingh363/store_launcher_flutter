@@ -1,10 +1,10 @@
-name: store_launcher
+name: store_launcher_plus
 description: App Store/Play Store launcher for android and ios apps
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+version: 1.0.1
+repository: https://github.com/ayushsingh363/store_launcher_flutter
 
 environment:
-  sdk: ^3.1.3
+  sdk: '>=2.19.0 <4.0.0'
 
 # Add regular dependencies here.
 dependencies:
