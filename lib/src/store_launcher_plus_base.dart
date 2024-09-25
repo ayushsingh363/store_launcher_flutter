@@ -104,7 +104,7 @@ class StoreLauncher {
   static Future<bool> launchStore(
       {String? packageName, required String appId}) async {
     try {
-      if (!Platform.isIOS && !Platform.isAndroid) {
+      if (!Platform.isIOS || !Platform.isAndroid) {
         return false;
       } else {
         return Platform.isAndroid

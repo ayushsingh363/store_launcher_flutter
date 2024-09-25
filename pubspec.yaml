@@ -1,6 +1,6 @@
 name: store_launcher_plus
 description: App Store/Play Store launcher for android and ios apps
-version: 1.0.1
+version: 1.0.2
 repository: https://github.com/ayushsingh363/store_launcher_flutter
 
 environment:
