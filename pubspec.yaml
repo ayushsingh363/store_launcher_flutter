@@ -1,6 +1,6 @@
 name: store_launcher_plus
 description: StoreLauncher is a powerful utility package for Flutter applications that allows developers to seamlessly launch the Google Play Store and Apple App Store directly from their apps.
-version: 1.0.3
+version: 1.0.4
 repository: https://github.com/ayushsingh363/store_launcher_flutter
 
 environment:

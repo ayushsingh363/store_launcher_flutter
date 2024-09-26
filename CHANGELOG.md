@@ -13,3 +13,7 @@
 ## 1.0.3
 
 - Improve pub score.
+
+## 1.0.4
+
+- Docs updated.
